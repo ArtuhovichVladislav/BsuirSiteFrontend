@@ -1,0 +1,55 @@
+@import '../colors';
+@import '../fonts';
+
+$card-padding-bottom: 30px;
+$content-padding-top: 10px;
+$content-padding-horizontal: 30px;
+$content-padding-bottom: 30px;
+$date-padding: 10px;
+$date-font-size: 12px;
+$title-padding: 10px;
+$title-font-size: 16px;
+$lead-padding: 10px;
+
+.cards-column {
+  .announce-card {
+    padding-bottom: $card-padding-bottom;
+
+    .announce-card-content {
+      background-color: #fff;
+      padding: $content-padding-top $content-padding-horizontal $content-padding-bottom $content-padding-horizontal;
+      border-bottom: 2px solid $underline-color;
+
+      .full-card-content {
+        padding-top: 25px;
+      }
+
+      .announce-card-date {
+        color: $font-color-primary;
+      	border-bottom: 2px solid $underline-color;
+        padding-bottom: 4px;
+      	font-style: normal;
+      	position: relative;
+      	font-size: 12px;
+      	font-weight: bold;
+      	display: inline-block;
+      	margin-bottom: 19px;
+      }
+
+      .announce-card-title {
+        color: $font-color-primary;
+      	font-size: $post_title_font_size;
+      	font-weight: 700;
+      	display: inline-block;
+        &:hover {
+      		color: $theme-color-yellow;
+          cursor: pointer;
+      	}
+      }
+
+      .announce-card-lead {
+        padding: $lead-padding 0;
+      }
+    }
+  }
+}

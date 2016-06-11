@@ -1,0 +1,56 @@
+.container
+  .row
+    .section-title
+      span Новости кафедры
+      .v-separator
+      a ng-href="#/news" Все новости
+  .row ng-repeat="oneNews in news | orderBy: '-id' | limitTo: 4" ng-if="$index % 2 == 0"
+    .col-md-6.news-column
+      a ng-href="#/news/page" 
+        img.news-item-image alt="alt" ng-src="{{news[$index].photo.path}}" 
+      .news-item-date
+        = "{{news[$index].created_at | date}}"
+      br   
+      a.news-item-title ng-href="#/news/page"
+        = "{{ news[$index].title }}"
+      .news-item-lead
+        = "{{ news[$index].description | limitTo: 100 }}{{news[$index].content.length > 20 ? '...' : ''}}"
+        
+    .col-md-6.news-column2
+      a ng-href="#/news/page" 
+        img.news-item-image alt="alt" ng-src="{{news[$index + 1].photo.path}}" 
+      .news-item-date
+        = "{{news[$index + 1].created_at | date}}" 
+      br
+      a.news-item-title ng-href="#/news/page"
+        = "{{ news[$index + 1].title }}"
+      .news-item-lead
+        = "{{ news[$index + 1].description | limitTo: 100 }}{{news[$index + 1].content.length > 20 ? '...' : ''}}"
+
+
+/ .container
+/   .row
+/     .section-title
+/       span Новости кафедры
+/       .v-separator
+/       a ng-href="#/news" Все новости
+/   .row ng-repeat="oneNews in news | orderBy: '-id' | limitTo: 4" ng-if="$index % 2 == 0"
+/     .col-md-6.news-column
+/       a ng-href="#/news/page" 
+/         img.news-item-image alt="alt" ng-src="{{news[$index].img}}" 
+/       .news-item-date
+/         = "{{news[$index].createdAt}}" 
+/       a.news-item-title ng-href="#/news/page"
+/         = "{{ news[$index].title }}"
+/       .news-item-lead
+/         = "{{ news[$index].content | limitTo: 100 }}{{news[$index].content.length > 20 ? '...' : ''}}"
+/         
+/     .col-md-6.news-column2
+/       a ng-href="#/news/page" 
+/         img.news-item-image alt="alt" ng-src="{{news[$index + 1].img}}" 
+/       .news-item-date
+/         = "{{news[$index + 1].createdAt}}" 
+/       a.news-item-title ng-href="#/news/page"
+/         = "{{ news[$index + 1].title }}"
+/       .news-item-lead
+/         = "{{ news[$index + 1].content | limitTo: 100 }}{{news[$index + 1].content.length > 20 ? '...' : ''}}"

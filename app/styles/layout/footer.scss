@@ -1,0 +1,116 @@
+@import '../colors';
+
+$height: 110px;
+$font-size: 14px;
+$phone-font-size: 18px;
+$line-height: $font-size * 1.5;
+$text-padding: $font-size * 1.3;
+$social-padding: 30px;
+$social-button-width: 30px;
+$social-button-height: 30px;
+$social-button-margin: 15px;
+$vk-image: url(../../images/social/vk.png);
+$vk-hover-image: url(../../images/social/vk-active.png);
+$facebook-image: url(../../images/social/facebook.png);
+$facebook-hover-image: url(../../images/social/facebook-active.png);
+$twitter-image: url(../../images/social/twitter.png);
+$twitter-hover-image: url(../../images/social/twitter-active.png);
+$instagram-image: url(../../images/social/instagram.png);
+$instagram-hover-image: url(../../images/social/instagram-active.png);
+
+.footer {
+  background-color: $theme-color-cyan;
+  color: white;
+  height: auto;
+
+  .footer-credits, .footer-info {
+    font-family: CirceRegular, sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+    padding: $text-padding 0;
+  }
+
+  .footer-credits {
+    text-align: left;
+  }
+
+  .footer-info {
+    text-align: right;
+
+    .footer-phone {
+      font-size: $phone-font-size;
+      font-weight: bold;
+    }
+  }
+
+  .footer-social {
+    padding-top: $social-padding;
+    text-align: center;
+
+    .social-button {
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: $social-button-height;
+      margin: 0 $social-button-margin;
+      width: $social-button-width;
+
+      &.vk {
+        background-image: $vk-image;
+
+        &:hover,
+        &:focus {
+          background-image: $vk-hover-image;
+          cursor: pointer;
+        }
+      }
+
+      &.facebook {
+        background-image: $facebook-image;
+
+        &:hover,
+        &:focus {
+          background-image: $facebook-hover-image;
+          cursor: pointer;
+        }
+      }
+
+      &.twitter {
+        background-image: $twitter-image;
+
+        &:hover,
+        &:focus {
+          background-image: $twitter-hover-image;
+          cursor: pointer;
+        }
+      }
+
+      &.instagram {
+        background-image: $instagram-image;
+
+        &:hover,
+        &:focus {
+          background-image: $instagram-hover-image;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .footer {
+    height: auto;
+    .footer-info {
+      padding-top: 15px;
+    }
+    .footer-social {
+      padding-bottom: 15px;
+      padding-top: 0px;
+    }
+    .footer-social, .footer-credits, .footer-info {
+  		display: block;
+  		width: 100%;
+  		text-align: center;
+  	}
+  }
+}

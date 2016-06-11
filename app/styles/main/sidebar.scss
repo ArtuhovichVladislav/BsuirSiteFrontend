@@ -1,0 +1,31 @@
+@import '../colors';
+
+$sidebar-width: 250px;
+$sidebar-item-height: 240px;
+$sidebar-text-font-size: 16px;
+$sidebar-text-line-height: $sidebar-text-font-size * 1.5;
+$sidebar-text-padding: 40px 20px;
+$sidebar-text-color: white;
+//
+.sidebar {
+//  width: $sidebar-width;
+//
+  .sidebar-item {
+    background-size: cover;
+    display: block;
+    height: $sidebar-item-height;
+    position: relative;
+
+    .sidebar-item-text {
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+      color: $sidebar-text-color;
+      font-family: CirceExtraBold, sans-serif;
+      font-size: $sidebar-text-font-size;
+      height: 100%;
+      line-height: $sidebar-text-line-height;
+      padding: $sidebar-text-padding;
+      text-transform: uppercase;
+      // border-top: 2px solid $theme-color-yellow;
+    }
+  }
+}

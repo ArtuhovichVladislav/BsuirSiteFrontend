@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title
+      | Кафедра ЭВМ
+    meta content="" name="description"
+    meta content="width=device-width" name="viewport"
+
+    link href="styles/app.css" rel="stylesheet"
+  body ng-app="bsuir-ecm"
+    .container-fluid
+      .row ng-include="'views/layout/header.html'"
+      .row ng-include="'views/layout/banner.html'"
+      .row ng-view=""
+      .row ng-include="'views/layout/footer.html'"
+
+  script src="bower_components/angular/angular.js"
+  script src="bower_components/angular-animate/angular-animate.js"
+  script src="bower_components/angular-aria/angular-aria.js"
+  script src="bower_components/angular-cookies/angular-cookies.js"
+  script src="bower_components/angular-messages/angular-messages.js"
+  script src="bower_components/angular-resource/angular-resource.js"
+  script src="bower_components/angular-route/angular-route.js"
+  script src="bower_components/angular-sanitize/angular-sanitize.js"
+  script src="bower_components/angular-touch/angular-touch.js"
+  script src="bower_components/jquery/dist/jquery.min.js"
+  script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"
+
+  script src="scripts/app.js"
+  script src="scripts/controllers/main.js"
+  script src="scripts/controllers/projects.js"
+  script src="scripts/controllers/test.js"
+  script src="scripts/controllers/news.js"
+  script src="scripts/controllers/one_news.js"
+  script src="scripts/controllers/announcements.js"
+  script src="scripts/controllers/login.js"

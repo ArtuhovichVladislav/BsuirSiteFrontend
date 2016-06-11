@@ -1,0 +1,26 @@
+.container
+  .row
+    .col-xs-12
+      .section-title
+        span Информация по проектам студентов
+
+  .row
+    .search-form
+      input type="search" title="search" placeholder="Поиск по теме проекта"
+
+  .row
+    .post-list
+      /.post-block ng-repeat="post in posts | pagination: curPage * pageSize | limitTo: pageSize"
+      .post-block ng-repeat="post in posts"
+        a.post-header ng-href="#/projects/page" 
+          = "{{ post.title }}"
+        .post-author
+          = "{{ post.author }} {{ post.course }} курс {{ post.group }} группа"
+        .post-links
+          a ng-href="#/projects/page"
+            = "Отзывы ( {{ post.reviews }} )"
+          .line
+          a.comments-link ng-href="#/projects/page"
+            = "Комментарии студентов ( {{ post.comments }} )"
+
+  /div ng-include="'views/layout/pagination.html'"

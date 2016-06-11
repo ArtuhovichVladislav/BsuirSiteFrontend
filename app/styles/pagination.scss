@@ -1,0 +1,105 @@
+@import "colors";
+@import 'fonts';
+@import 'colors';
+$pagination-sprite: "../images/pagination.png";
+
+.line {
+  border-left: 1px solid $font-color-primary;
+  display: inline;
+  margin: 8px;
+}
+
+.pagination-box {
+  border-top: 1px solid $font-color-search;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.pagination {
+  margin: 11px 0 120px;
+  width: 100%;
+
+  font-family: CirceRegular, sans-serif;
+  font-size: 14px;
+  color: $font-color-primary;
+
+  /* Firefox */
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+
+  /* Safari and Chrome */
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+
+  .pagination-num {
+    display: inline;
+    outline: 0;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:hover, &:focus {
+      color: $theme-color-yellow;
+      border-top: 3px solid $theme-color-yellow;
+    }
+  }
+
+  .pagination-control {
+    display: -moz-inline-box;
+    width: 50%;
+
+    .page-controls-forward {
+      display: inherit;
+      outline: 0;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      &:hover .page-controls-arrow {
+        background-position: -0px -0px;
+      }
+
+      &:hover .page-controls-text {
+        color: $theme-color-yellow;
+      }
+
+      .page-controls-arrow {
+        margin: 6px 10px 10px;
+        background: url($pagination-sprite) -0px -54px;
+      }
+
+    }
+
+    .page-controls-back {
+      display: inherit;
+      outline: 0;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      &:hover .page-controls-arrow {
+        background-position: -0px -36px;
+      }
+
+      &:hover .page-controls-text {
+        color: $theme-color-yellow;
+      }
+
+      .page-controls-arrow {
+        margin: 6px 10px 10px;
+        background: url($pagination-sprite) -0px -18px;
+      }
+    }
+
+    .page-controls-arrow {
+      display: inherit;
+      margin: 20px;
+      width: 17px;
+      height: 8px;
+    }
+
+    .page-controls-text {
+      display: inherit;
+    }
+  }
+}

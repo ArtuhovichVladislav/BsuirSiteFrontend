@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <i class="department-news gap">Новости кафедры</i>
+    <div ng-repeat="post in blog.posts | orderBy: '-id'">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div ng-click="blog.selectTab($index)">
+            <img class="post-img" ng-src="{{post.img}}" alt="alt" style="display:block">
+              <i class="time">{{post.createdAt}}</i>
+              <a href="#" class="post-title">{{ post.title }}</a>
+              <h5 class="post-content">{{ post.content | limitTo: 100 }}{{post.content.length > 20 ? '...' : ''}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <ul class="">
+    <li><a href="#">&larr; вперёд</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">назад	&rarr;</a></li>
+  </ul>
+
+  <div style="margin-bottom:100px;"></div>
+</div>

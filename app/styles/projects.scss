@@ -1,0 +1,192 @@
+@import "colors";
+
+$pagination-sprite: "../images/pagination.png";
+
+@mixin placeholder-style() {
+  font-family: CirceRegular, sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  color: $font-color-search;
+}
+
+.head-text {
+  font-family: CirceExtraBold, sans-serif;
+  font-size: 23px;
+  color: $font-color-primary;
+
+  margin-top: 60px;
+  margin-bottom: 54px;
+}
+
+.search-form {
+  input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid $font-color-search;
+    padding-left: 30px;
+  }
+
+  margin-bottom: 50px;
+
+  input::-webkit-input-placeholder {
+    @include placeholder-style
+  }
+  input::-moz-placeholder {
+    @include placeholder-style
+  }
+  input:-moz-placeholder {
+    @include placeholder-style
+  }
+  input:-ms-input-placeholder {
+    @include placeholder-style
+  }
+}
+
+.post-list {
+  margin-bottom: 116px;
+
+}
+
+.post-block {
+  margin-bottom: 50px;
+}
+
+.post-header {
+  font-family: CirceBold, sans-serif;
+  font-size: 23px;
+  color: $font-color-primary;
+  box-sizing: inherit;
+
+  margin-bottom: 10px;
+}
+
+.post-author {
+  font-family: CirceRegular, sans-serif;
+  font-size: 14px;
+  color: $font-color-primary;
+
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+.post-links {
+  font-family: CirceRegular, sans-serif;
+  font-size: 14px;
+  color: $font-color-link;
+  line-height: 10px;
+
+  margin-top: 14px;
+}
+
+.line {
+  border-left: 1px solid $font-color-primary;
+  display: inline;
+  margin: 8px;
+}
+
+$card-padding-bottom: 30px;
+$content-padding-top: 10px;
+$content-padding-horizontal: 30px;
+$content-padding-bottom: 30px;
+$date-padding: 10px;
+$date-font-size: 12px;
+$title-padding: 10px;
+$title-font-size: 16px;
+$lead-padding: 10px;
+
+.reviews-cards-title {
+  color: $font-color-primary;
+  font-size: $post_title_font_size;
+  font-weight: bold;
+  display: inline-block;
+  padding-bottom: 27px;
+}
+
+.review-card {
+  padding-bottom: $card-padding-bottom;
+
+  .review-card-content {
+    background-color: #eef1f6;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .review-card-date {
+      color: #b9c1d0;
+      font-style: normal;
+      position: relative;
+      font-size: 12px;
+      font-weight: bold;
+      display: inline-block;
+      padding-bottom: 27px;
+    }
+
+    .review-card-title {
+      color: $font-color-primary;
+      font-size: $post_title_font_size;
+      font-weight: bold;
+      display: inline-block;
+      padding-top: 30px;
+      padding-bottom: 27px;
+    }
+
+    .review-card-lead {
+      padding-bottom: 30px;
+      text-align: justify;
+    }
+  }
+}
+
+.comments-cards-title {
+  color: $font-color-primary;
+  font-size: $post_title_font_size;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+.comment-card {
+  padding-bottom: $card-padding-bottom;
+  .comment-card-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .comment-card-content {
+    background-color: #fff;
+
+    .comment-card-date {
+      color: #b9c1d0;
+      font-style: normal;
+      position: relative;
+      font-size: 12px;
+      font-weight: bold;
+      display: inline-block;
+      padding-bottom: 55px;
+      padding-left: 10px;
+    }
+
+    .comment-card-title {
+      color: #595959;
+      font-size: $post_title_font_size;
+      font-weight: bold;
+      display: inline-block;
+      //padding-top: 30px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+    }
+
+    .comment-card-lead {
+      padding-bottom: 15px;
+      text-align: justify;
+      padding-left: 10px;
+    }
+  }
+}
+
+.login-message {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 120px;
+  color: #595959;
+}

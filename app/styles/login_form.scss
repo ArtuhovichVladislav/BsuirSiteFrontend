@@ -1,0 +1,105 @@
+@import "colors";
+
+$item-margin-left: 107px;
+$item-margin-right: 107px;
+$item-width: 323px;
+$modal-width: 537px;
+$modal-height: 353px;
+
+$sm-item-margin-left: $item-margin-left * 0.6;
+$sm-item-margin-right: $item-margin-right * 0.6;
+$sm-item-width: $item-width * 0.6;
+$sm-modal-width: $modal-width * 0.6;
+$sm-modal-height: $modal-height * 0.6;
+
+.modal-header {
+    text-align: center;
+    padding: 0px;
+
+    .close {
+      margin-top: 15px;
+      margin-right: 20px;
+      color: $font-color-primary;
+      font-size: 35px;
+      font-weight: 100;
+      opacity: 1;
+    }
+  }
+
+  .modal-dialog {
+    margin: 30px auto;
+    margin-top: 250px;
+    width: $modal-width;
+    height: $modal-height;
+  }
+
+  .modal-content {
+    border-radius: 0px;
+  }
+
+  .modal-title {
+    margin-top: 56px;
+    margin-bottom: 30px;
+  }
+
+  .login-input {
+    margin-left: $item-margin-left;
+    margin-right: $item-margin-right;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    border-radius: 0px;
+    width: $item-width;
+    height: 40px;
+    text-align: center;
+    display: inline;
+  }
+
+  .forgot-passw {
+    text-align: left;
+    margin-left: $item-margin-left;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: $font-color-primary;
+    text-decoration: underline;
+    display: block;
+  }
+
+  .login-btn {
+    background-color: $theme-color-cyan;
+    margin-top: 25px;
+    margin-left: $item-margin-left;
+    margin-right: $item-margin-right;
+    margin-bottom: 60px;
+    height: 40px;
+    width: $item-width;
+    border-radius: 0px;
+    color: $white;
+  }
+
+@media (max-width: 768px) {
+
+  .modal-dialog {
+    margin-top: 150px;
+    width: $sm-modal-width;
+    height: $sm-modal-height;
+  }
+
+  .login-input {
+    margin-left: $sm-item-margin-left;
+    margin-right: $sm-item-margin-right;
+    width: $sm-item-width;
+  }
+
+  .forgot-passw {
+    margin-left: $sm-item-margin-left;
+  }
+
+  .login-btn {
+    margin-left: $sm-item-margin-left;
+    margin-right: $sm-item-margin-right;
+    width: $sm-item-width;
+  }
+
+}

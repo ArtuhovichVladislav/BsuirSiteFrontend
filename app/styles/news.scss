@@ -1,0 +1,95 @@
+@import 'fonts';
+@import 'colors';
+
+$department_news_title_font_size: 23px;
+$news_time_font_size: 12px;
+$department_news_margin_bottom: 57px;
+$department_news_margin_top: 64px;
+$post_title_font_size: 16px;
+$post_content_font_size: 14px;
+$news_dirs_font_size: 14px;
+
+.post-title-inside-post {
+  font-size: 23px;
+	font-weight: bold;
+	color: $black;
+	position: relative;
+  margin-bottom: 5px;
+}
+
+.full-post-img {
+  width: 100%;
+}
+
+.post-content-inside {
+  margin-top: 30px;
+  color: $post-content-color;
+}
+
+.share-block {
+  padding-top: 34px;
+  padding-bottom: 94px;
+}
+.share {
+  display: inline;
+
+  i {
+    font-style: normal;
+    color: $black;
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: middle;
+  }
+
+  .sprite {
+    background: url('../images/social_icons.png') no-repeat top left;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    margin-left: 30px;
+    vertical-align: middle;
+    &:hover {
+  		cursor: pointer;
+  	}
+  }
+
+  .sprite.facebook {
+     background-position: 0 0;
+     &:hover {
+       background-position: -25px 0;
+     }
+   }
+
+  .sprite.instagram {
+    background-position: -50px 0;
+    &:hover {
+       background-position: -75px 0;
+    }
+  }
+  .sprite.share-icon {
+    background-position: -100px 0;
+    width: 13px;
+    height: 10px;
+    margin-left: 0px;
+    margin-right: 10px;
+    &:hover {
+  		cursor: default;
+  	}
+  }
+  .sprite.twitter {
+    background-position: -123px 0;
+    &:hover {
+      background-position: -148px 0;
+    }
+  }
+  .sprite.vk {
+    background-position: -173px 0;
+    height: 17px;
+    width: 17px;
+    &:hover {
+       background-position: -200px 0;
+       width: 17px;
+       height: 17px;
+    }
+  }
+}

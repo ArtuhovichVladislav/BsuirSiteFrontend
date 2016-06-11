@@ -1,0 +1,119 @@
+.announcements-background
+  .container
+    .row
+      .col-xs-12
+        .section-title
+          span Объявления
+    .row ng-repeat="announcement in announcements | orderBy: 'id'"
+      .cards-column
+        .announce-card
+          .announce-card-content
+            .full-card-content
+              .my_announcement-comments-count-circle.pull-right
+                = 2
+              i.announce-card-date 
+                = "{{announcement.createdAt}}" 
+              br
+              a.announce-card-title ng-href="#/announcements/page"
+                = "{{ announcement.title }}"
+              .announce-card-lead
+                = "{{ announcement.content }}"
+              .announce-card-lead
+                = "{{ announcement.paragraph }}"
+          
+        / div ng-repeat="announcement in announcements | orderBy: 'id'"
+        /   .panel.panel-default.my_announcements-panel.gap
+        /     .my_announcement-panel-content
+        /       i.announce-card-date  
+        /         = "{{announcement.createdAt}}" 
+        /       .my_announcement-comments-count-circle.pull-right
+        /         = 2
+        /       a.post-title ng-href="#/announcements/page" 
+        /         = "{{ announcement.title }}"
+        /       .post-content 
+        /         p
+        /           = "{{ announcement.content }}"
+        /         p
+        /           = "{{ announcement.paragraph }}"
+        /         div ng-if="announcement.id == 1"
+        /           .my_announcement-table
+        /             table.table.table-hover
+        /               thead
+        /                 tr
+        /                   th 
+        /                     = "Имя Фамилия Отчество"
+        /                   th 
+        /                     = "Курс"
+        /                   th 
+        /                     = "Долги к оплате"
+        /               tbody
+        /                 tr
+        /                   td  
+        /                     = "Кузнецов Петр Олегович"
+        /                   td  
+        /                     = "5 курс 1002 группа"
+        /                   td  
+        /                     = "1 000 000 руб."
+        /                 tr
+        /                   td  
+        /                     = "Савина Алина Сергеевна"
+        /                   td  
+        /                     = "4 курс 1001 группа"
+        /                   td  
+        /                     = "456 000 руб."
+        /                 tr
+        /                   td  
+        /                     = "Свиридов Владимир Анатольевич"
+        /                   td  
+        /                     = "3 курс 1001 группа"
+        /                   td  
+        /                     = "15 560 руб."
+        /                 tr
+        /                   td  
+        /                     = "Свиридов Владимир Анатольевич"
+        /                   td  
+        /                     = "3 курс 1001 группа"
+        /                   td  
+        /                     = "15 560 руб."
+        /                 tr
+        /                   td  
+        /                     = "Свиридов Владимир Анатольевич"
+        /                   td  
+        /                     = "3 курс 1001 группа"
+        /                   td  
+        /                     = "15 560 руб."
+        /                 tr
+        /                   td  
+        /                     = "Свиридов Владимир Анатольевич"
+        /                   td  
+        /                     = "3 курс 1001 группа"
+        /                   td  
+        /                     = "15 560 руб."
+        /                 tr
+        /                   td  
+        /                     = "Свиридов Владимир Анатольевич"
+        /                   td  
+        /                     = "3 курс 1001 группа"
+        /                   td  
+        /                     = "15 560 руб."
+        /                 tr
+        /                   td  
+        /                     = "Кузнецов Петр Олегович"
+        /                   td  
+        /                     = "5 курс 1002 группа"
+        /                   td  
+        /                     = "1 000 000 руб."
+        /                 tr
+        /                   td  
+        /                     = "Савина Алина Сергеевна"
+        /                   td  
+        /                     = "4 курс 1001 группа"
+        /                   td  
+        /                     = "456 000 руб."
+        /                 tr
+        /                   td  
+        /                     = "Свиридов Владимир Анатольевич"
+        /                   td  
+        /                     = "3 курс 1001 группа"
+        /                   td  
+        /                     = "15 560 руб."

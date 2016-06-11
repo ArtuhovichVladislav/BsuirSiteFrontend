@@ -1,0 +1,16 @@
+/ .project-title Математическое программное обеспечение вычислительных машин, комплексов и компьютерных сетей
+/ .project-author Петрова Полина Алексеевна 1 курс 1002 группа
+/ .project-links Отзывы (2) | Комментарии студентов (2)
+.row
+  .col-xs-12
+    .post-block ng-repeat="post in posts | limitTo: 5"
+      a.post-header ng-href="#/projects/page"
+        = "{{ post.title }}"
+      .post-author
+        = "{{ post.author }} {{ post.course }} курс {{ post.group }} группа"
+      .post-links
+        a ng-href="#/projects/page"
+          = "Отзывы ( {{ post.reviews }} )"
+        .line
+        a.comments-link ng-href="#/projects/page"
+          = "Комментарии студентов ( {{ post.comments }} )"

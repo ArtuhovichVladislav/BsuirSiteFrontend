@@ -1,0 +1,18 @@
+@import 'colors';
+
+// Bootstrap variables override
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-sans-serif: "Circe";
+$navbar-height: 60px;
+$navbar-margin-bottom: 0px;
+$navbar-border-radius: 0px;
+$navbar-default-bg: $theme-color-cyan;
+$navbar-default-border: none;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-color: white;
+$navbar-default-link-hover-bg: transparent;
+$navbar-default-link-active-color: $theme-color-yellow;
+$navbar-default-link-active-bg: transparent;
+
+$container-large-desktop: 970px;
+$grid-gutter-width: 0px;

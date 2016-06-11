@@ -1,0 +1,21 @@
+@import '../colors';
+
+$item-padding: 50px;
+$title-font-size: 23px;
+$author-padding: 12px;
+
+.projects {
+  .project-info {
+    padding-bottom: $item-padding;
+
+    .project-title {
+      font-family: CirceBold, sans-serif;
+      font-size: $title-font-size;
+      line-height: $title-font-size;
+    }
+
+    .project-author {
+      padding: $author-padding 0 $author-padding 0;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+$banner-height: 540px;
+$banner-title-font-size: 40px;
+$banner-title-line-height: $banner-title-font-size * 1.5;
+$banner-title-padding: $banner-title-font-size * 0.6;
+$banner-lead-font-size: 18px;
+$banner-lead-line-height: $banner-lead-font-size * 1.5;
+$banner-lead-padding: $banner-lead-font-size * 0.6;
+$banner-background-image: url(../../images/banner.jpg);
+$logo-width: 164px;
+$logo-height: 105px;
+$logo-vertical-margin: 30px;
+$logo-background-image: url(../../images/evm-logo.png);
+
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), $banner-background-image;
+  background-size: cover;
+  color: white;
+  height: $banner-height;
+  text-transform: uppercase;
+
+  .evm-logo {
+    background-image: $logo-background-image;
+    height: $logo-height;
+    margin: $logo-vertical-margin 0;
+    width: $logo-width;
+  }
+
+  .banner-title {
+    font-family: CirceExtraBold, sans-serif;
+    font-size: $banner-title-font-size;
+    line-height: $banner-title-line-height;
+    padding: $banner-title-padding 0;
+  }
+
+  .banner-lead {
+    font-size: $banner-lead-font-size;
+    font-weight: bold;
+    line-height: $banner-lead-line-height;
+    padding: $banner-lead-padding 0;
+  }
+}
+
+@media (max-width: 768px) {
+    .banner {
+      .banner-title {
+        font-size: 32px;
+        padding: 20px 0;
+        line-height: 36px;
+      }
+      .banner-lead {
+        font-size: 14px;
+        padding: 10px 0;
+        line-height: 18px;
+      }
+    }
+}
+
+@media (max-width: 360px) {
+    .banner {
+      .banner-title {
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+}
+
+@media (max-width: 300px) {
+    .banner {
+      .banner-title {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+}

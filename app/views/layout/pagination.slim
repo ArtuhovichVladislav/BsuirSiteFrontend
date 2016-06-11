@@ -1,0 +1,17 @@
+.row.pagination-box
+  .col-lg-3
+  .col-lg-6
+    .pagination ng-show="$parent.listLength > $parent.pageSize"
+      .pagination-control
+        .page-controls-back ng-click="$parent.curPage = $parent.curPage - 1" ng-disabled="$parent.curPage == 0"
+          .page-controls-arrow
+          .page-controls-text
+            = "назад"
+        .pagination-num ng-repeat="num in range(numberOfPages()) track by $index" ng-click="$parent.curPage = $index + 1"
+          = "{{ $index + 1 }}"
+        .page-controls-forward ng-click="$parent.curPage = $parent.curPage + 1" ng-disabled="$parent.curPage >= $parent.listLength/$parent.pageSize - 1"
+          .page-controls-text
+            = "вперед"
+          .page-controls-arrow
+
+  .col-lg-3

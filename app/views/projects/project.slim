@@ -1,0 +1,82 @@
+.container
+  .row
+    .col-xs-12
+      .section-title
+        span Информация по проектам студентов
+        .v-separator
+        a ng-href="#/projects" К списку проектов
+        .v-separator
+        a ng-href="#/projects" К следующему
+        .v-separator
+        a ng-href="#/projects" К предыдущему
+          
+  .row
+    .col-xs-12
+      .search-form
+        input type="search" title="search" placeholder="Поиск по теме проекта"
+
+  .row
+    .col-xs-12
+      .post-header
+        = "{{ posts[0].title }}"
+      .reviews-cards-title
+        = "Отзывы руководителя и рецендиста"
+      
+  .row
+    .col-xs-12
+      .review-card
+        .review-card-content
+          .review-card-title
+            | Сидоров Петр Романович
+          .review-card-lead 
+            = "{{ posts[0].content }}"
+                    
+          i.review-card-date
+            | вчера в 19:07
+    .row
+      .col-xs-12
+        .review-card
+          .review-card-content
+            .review-card-title
+              | Сидоров Петр Романович
+            .review-card-lead 
+              = "{{ posts[0].content }}"
+                      
+            i.review-card-date
+              | вчера в 19:07 
+      .row
+        .col-xs-12
+          .comments-cards-title
+            = "Комментарии студентов ( {{posts[0].comments}} )" 
+      .row
+        .col-md-12
+          .comment-card
+            .comment-card-content
+              .col-md-1
+                img.comment-card-avatar alt="alt" ng-src="{{posts[0].img}}"
+              .col-md-11
+                .comment-card-title
+                  = "Александр Новиков"
+                .comment-card-lead 
+                  = "{{ posts[0].content }}"
+                i.comment-card-date
+                  | вчера в 19:07  
+        .row
+          .col-md-12
+            .comment-card
+              .comment-card-content
+                .col-md-1
+                  img.comment-card-avatar alt="alt" ng-src="{{posts[0].img}}"
+                .col-md-11
+                  .comment-card-title
+                    = "Александр Новиков"
+                  .comment-card-lead 
+                    = "{{ posts[0].content }}"
+                  i.comment-card-date
+                    | вчера в 19:07  
+                
+    p.login-message            
+      | Только зарегистрированные пользователи могут оставлять комментарии. 
+      a data-toggle="modal" data-target="#myModal" ng-href="#/projects/page" Войдите
+      |, пожалуйста.
+                

@@ -1,0 +1,45 @@
+.header
+  .navbar.navbar-default role="navigation"
+    .container
+      .navbar-header
+        button.navbar-toggle data-target="#myNavbar" data-toggle="collapse" type="button" 
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      .collapse.navbar-collapse#myNavbar
+        ul.nav.navbar-nav.navbar-left
+          li.focus
+            a href="#/"
+              | RUS | ENG
+        ul.nav.navbar-nav.navbar-right
+          li
+            a ng-href="#/news"
+              | О кафедре
+          li
+            a ng-href="#/announcements"
+              | Структура кафедры
+          li
+            a ng-href="#/projects"
+              | Образование
+          li
+            a ng-href="#/"
+              | Обратная связь
+          li
+            a data-toggle="modal" data-target="#myModal" ng-href="#/"
+              = "Регистрация | Войти"
+          li
+            a ng-href="#/"
+              i.glyphicon.glyphicon-search
+              
+#myModal.modal.fade role="dialog" 
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close data-dismiss="modal" type="button"  &times;
+        h4.modal-title 
+          = "Войти на сайт"
+        input#email.form-control.login-input name="email" placeholder="Логин" type="email" 
+        input#key.form-control.login-input name="key" placeholder="Пароль" type="password"
+        a.forgot-passw ng-href="#/"
+          = "Забыли пароль?" 
+        button.btn.login-btn data-dismiss="modal" type="button" Войти

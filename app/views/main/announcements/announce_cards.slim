@@ -1,0 +1,26 @@
+.row ng-repeat="announcement in announcements | orderBy: 'id'| limitTo: 6" ng-if="$index % 2 == 0"
+  .col-md-6.cards-column
+    .announce-card
+      .announce-card-content
+          .my_announcement-comments-count-circle.pull-right
+            = 2
+          i.announce-card-date
+            = "{{announcements[$index].createdAt}}" 
+          br
+          a.announce-card-title ng-href="#/announcements/page"
+            = "{{ announcements[$index].title }}"
+          .announce-card-lead
+            = "{{ announcements[$index].content | limitTo: 100 }}{{announcements[$index].content.length > 50 ? '...' : ''}}"
+            
+  .col-md-6.cards-column
+    .announce-card
+      .announce-card-content
+          .my_announcement-comments-count-circle.pull-right
+            = 2
+          i.announce-card-date  
+            = "{{ announcements[$index + 1].createdAt}}"
+          br 
+          a.announce-card-title ng-href="#/announcements/page"
+            = "{{ announcements[$index + 1].title }}"
+          .announce-card-lead
+            = "{{ announcements[$index + 1].content | limitTo: 100 }}{{announcements[$index + 1].content.length > 50 ? '...' : ''}}"

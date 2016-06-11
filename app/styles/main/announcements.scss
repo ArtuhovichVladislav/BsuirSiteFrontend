@@ -1,0 +1,99 @@
+@import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables';
+@import '../colors';
+@import '../fonts';
+
+@import 'sidebar';
+@import 'announce_card';
+
+$announcements-height: 960px;
+$announce-cards-width: 73.4%;
+$sidebar-width: 26.6%;
+
+$cards-column-right-padding: 30px;
+
+@media (min-width: $screen-md-min) {
+  .announcements {
+    height: $announcements-height;
+
+    .announce-cards {
+      width: $announce-cards-width;
+
+      .cards-column {
+        padding-left: 0;
+        padding-right: $cards-column-right-padding;
+      }
+    }
+
+    .sidebar {
+      width: $sidebar-width;
+    }
+  }
+}
+
+.announcements {
+  background-color: $theme-color-bg-grey;
+}
+
+.announcements-background {
+  background-color: $theme-color-bg-grey;
+}
+
+////////////////////////////////////////////////////////////////
+$announcements_margin_bottom: 57px;
+$announcements_margin_top: 64px;
+$announcements_title_font_size: 23px;
+$announcement_time_font_size: 12px;
+
+.news-time {
+  color: $font-color-primary;
+	border-bottom: 2px solid $underline-color;
+  padding-bottom: 3px;
+	font-style: normal;
+	position: relative;
+	font-size: $announcement_time_font_size;
+	font-weight: bold;
+	display: inline-block;
+	margin-bottom: 19px;
+}
+
+.my_announcement-comments-count-circle {
+  width: 21px;
+  height: 21px;
+  border: 1px solid #b9c1d0;
+  border-radius: 50%;
+  font-size: 11px;
+  color: #b9c1d0;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.my_announcement-table {
+  color: $black;
+  margin-top: 20px;
+
+  table > thead > tr > th {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 0;
+    background-color: #eef1f5;
+  }
+  table > tbody > tr > td {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 35px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border: 0;
+  }
+}
+
+.inside-ann {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}

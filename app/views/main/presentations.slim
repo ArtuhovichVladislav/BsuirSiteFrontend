@@ -1,0 +1,13 @@
+.container
+  .row
+    .section-title
+      span Темы и презентации
+      .v-separator
+      a ng-href="#/" Все презентации
+  .presentations-content
+    .row.presentations-row
+      .col-md-5.presentations-col
+        .row.video-preview
+        .row.video-preview
+      .col-md-7.presentations-col ng-include="'views/main/presentations/article_preview.html'"
+    .row.presentations-row ng-include="'views/main/presentations/article_preview.html'"

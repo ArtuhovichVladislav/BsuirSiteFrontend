@@ -1,0 +1,20 @@
+$circe-regular-path: "../fonts/circe/CRC55.otf";
+$circe-bold-path: "../fonts/circe/Circe-Bold.otf";
+$circe-extrabold-path: "../fonts/circe/Circe-ExtraBold.otf";
+
+@font-face {
+  font-family: CirceRegular;
+  src: url($circe-regular-path);
+}
+
+
+@font-face {
+  font-family: CirceBold;
+  src: url($circe-bold-path);
+}
+
+
+@font-face {
+  font-family: CirceExtraBold;
+  src: url($circe-extrabold-path);
+}

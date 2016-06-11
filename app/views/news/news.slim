@@ -1,0 +1,44 @@
+.news
+  .container
+    .row
+      .col-xs-12
+        .section-title
+          span Новости кафедры
+    .row ng-repeat="oneNews in news | orderBy: '-id'" ng-if="$index % 2 == 0"
+      .col-md-6.news-column
+        a ng-href="#/news/page" 
+          img.news-item-image alt="alt" ng-src="{{news[$index].photo.path}}" 
+        .news-item-date
+          = "{{news[$index].created_at | date}}"
+        br   
+        a.news-item-title ng-href="#/news/page"
+          = "{{ news[$index].title }}"
+        .news-item-lead
+          = "{{ news[$index].description | limitTo: 100 }}{{news[$index].content.length > 20 ? '...' : ''}}"
+          
+      .col-md-6.news-column2
+        a ng-href="#/news/page" 
+          img.news-item-image alt="alt" ng-src="{{news[$index + 1].photo.path}}" 
+        .news-item-date
+          = "{{news[$index + 1].created_at | date}}"
+        br 
+        a.news-item-title ng-href="#/news/page"
+          = "{{ news[$index + 1].title }}"
+        .news-item-lead
+          = "{{ news[$index + 1].description | limitTo: 100 }}{{news[$index + 1].content.length > 20 ? '...' : ''}}"
+  / 
+  / .row.pagination-box
+  /      .col-lg-3
+  /      .col-lg-6
+  /        .pagination ng-show="news.length > pageSize"
+  /          .pagination-control
+  /            .page-controls-back ng-click="curPage = curPage-1" ng-disabled="curPage == 0"
+  /              .page-controls-arrow
+  /              .page-controls-text
+  /                = "назад"
+  /            .pagination-num ng-repeat="num in range(numberOfPages()) track by $index" ng-click="curPage = $index + 1"
+  /              = "{{ $index + 1 }}"
+  /            .page-controls-forward ng-click="curPage = curPage+1" ng-disabled="curPage >= news.length/pageSize - 1"
+  /              .page-controls-text
+  /                = "вперед"
+  /              .page-controls-arrow

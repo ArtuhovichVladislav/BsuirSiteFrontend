@@ -1,0 +1,58 @@
+@import '../colors';
+
+$link-hover-underline-size: 2px;
+$link-margin: 15px;
+
+.header {
+ .nav > li > a {
+   box-sizing: border-box;
+   font-weight: bold;
+   margin: 0 $link-margin;
+   padding-left: 0;
+   padding-bottom: 0;
+   padding-right: 0;
+   display: inline-block;
+
+   &:hover,
+   &:focus {
+     border-bottom: $link-hover-underline-size solid $theme-color-yellow;
+   }
+ }
+
+ .navbar-toggle {
+     border-color: #068c98;
+     &:hover,
+     &:focus {
+        background-color: #0ebdcf;
+     }
+ }
+
+ .navbar {
+   border: none;
+ }
+
+ .navbar-left > li:first-child > a {
+   margin-left: 0;
+ }
+
+ .navbar-right > li:last-child > a {
+   margin-right: 0;
+ }
+
+ .navbar-collapse {
+   padding-left: 0;
+   padding-right: 0;
+ }
+
+ .navbar-right {
+   margin-right: 0;
+ }
+}
+
+@media (max-width: 991px) {
+  .header {
+     .nav > li > a {
+       margin: 0 10px;
+     }
+   }
+}

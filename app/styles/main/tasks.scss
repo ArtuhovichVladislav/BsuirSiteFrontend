@@ -1,0 +1,30 @@
+@import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables';
+@import '../colors';
+
+$number-of-columns: 5;
+$column-width: (1 / $number-of-columns) * 100%;
+$column-height: 70px;
+$first-column-padding: 40px;
+
+.tasks-heading, .task-body {
+  .col {
+    display: inline-block;
+    height: $column-height;
+    line-height: $column-height;
+    width: $column-width;
+
+    &:first-child {
+      padding-left: $first-column-padding;
+    }
+
+    span {
+      vertical-align: middle;
+      line-height: normal;
+    }
+  }
+}
+
+.tasks-heading {
+  background-color: $theme-color-bg-grey;
+  font-weight: bold;
+}

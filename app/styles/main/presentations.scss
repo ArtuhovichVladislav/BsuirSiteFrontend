@@ -1,0 +1,48 @@
+@import '../colors';
+
+$banner-background-image: url(../../images/banner.jpg);
+$presentations-top-height: 350px;
+$presentations-bottom-height: 300px;
+
+$preview-text-padding: 80px 50px 80px 50px;
+$article-title-padding: 0 0 20px 0;
+
+.presentations {
+  background-color: $theme-color-bg-grey;
+
+  .presentations-content {
+    color: white;
+
+    .presentations-row:first-child{
+      height: $presentations-top-height;
+    }
+
+    .presentations-row:last-child {
+      background: $banner-background-image;
+      background-size: cover;
+      height: $presentations-bottom-height;
+    }
+
+    .presentations-col {
+      height: 100%;
+    }
+
+    .video-preview {
+      background: $banner-background-image;
+      background-size: cover;
+      height: 50%;
+    }
+
+    .article-preview {
+      background: $banner-background-image;
+      height: 100%;
+      padding: $preview-text-padding;
+
+      .article-title {
+        font-size: 23px;
+        font-weight: bold;
+        padding: $article-title-padding;
+      }
+    }
+  }
+}
